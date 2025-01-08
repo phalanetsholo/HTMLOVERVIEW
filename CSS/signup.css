@@ -1,0 +1,99 @@
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: aquamarine;
+
+}
+
+.main-div{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow:5px 10px 8px 10px #888888;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+h1{
+   margin-bottom: 20px;
+   font-size: 24px;
+   color: green;
+   text-decoration: underline;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.form-div {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.form-div label{
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: rgb(75, 69, 69);
+   align-items: flex-start;
+   text-align: start;
+   text-align: right;
+   
+}
+.form-div input{
+    width: 100%;
+    padding: 10px; 
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    align-items: flex-start;
+    
+    
+}
+
+.action-div {
+    margin-top: 15px;
+    font-size: 16px;
+    color: rgb(87, 81, 81);
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+.action-div a{
+    text-decoration: none;
+    padding: 10px;
+    color: lightseagreen;
+    font-weight: bold;
+}
+
+
+.btn{
+    border-radius: 5px;
+    color: green;
+}
+.btn:hover{
+    background-color: darkgreen;
+}
