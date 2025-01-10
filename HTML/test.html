@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Post Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .header {
+            background-color: #4267B2;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .profile-name {
+            font-size: 16px;
+        }
+        .main {
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .post-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post-header .name {
+            font-weight: bold;
+        }
+        .post-content {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Facebook</div>
+        <div class="profile">
+            <img src="profile-pic.jpg" alt="Profile Picture">
+            <div class="profile-name">John Doe</div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="post-header">
+            <img src="profile-pic.jpg" alt="User Picture">
+            <div class="name">Jane Smith</div>
+        </div>
+        <div class="post-content">
+            This is an example of a written post. It could be anything, such as a status update, a thought, or a story shared with friends!
+        </div>
+    </div>
+</body>
+</html>
