@@ -16,16 +16,17 @@ body {
 
 
 .logo {
-     width: 100px;
-     height: 100px;
-     margin-bottom: 20px;
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .login-div {
     width: 100%;
     max-width: 400px;
     padding: 20px;
-    background: rgb(150, 202, 150);
+    background: rgb(209, 237, 209);
     box-shadow:5px 10px 8px 10px #888888;
     border-radius: 8px;
     text-align: center;
@@ -38,19 +39,35 @@ body {
 
 }
 
-.input-div label{
-    font-weight: bold;
+.input-div {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
 }
+
+
 
 .login-div input[type="email"],
 .login-div input[type="password"] {
-     width: calc(100% - 10px);
-     padding: 10px;
-     margin: 10px 0;
-     border: 1px solid #ccc;
-     border-radius: 4px;
-     font-size: 16px;
+    width: 90%;
+    padding: 10px 15px; 
+    border: 2px solid rgba(0, 0, 0, 0.2); 
+    border-radius: 25px; 
+    background-color: transparent; 
+    color: #333; 
+    font-size: 16px; 
+    outline: none;
+    transition: border-color 0.3s ease
 
+}
+
+.style-label {
+    font-size: 14px;
+    font-weight: bold; 
+    color: #555; 
+    margin-bottom: 5px; 
+    letter-spacing: 0.5px; 
+    text-transform: uppercase; 
 }
 
 
@@ -82,6 +99,21 @@ body {
     text-decoration: underline;
 }
 
+.log-btn{
+    display: inline-block; 
+    padding: 10px 20px;    
+    background-color: green; 
+    color: white;          
+    text-decoration: none; 
+    font-size: 16px;       
+    font-weight: bold;     
+    border-radius: 20px;   
+    text-align: center;    
+    transition: background-color 0.3s ease; 
+}
+.log-btn:hover {
+    background-color: darkgreen; /* Darkens the green on hover */
+}
 .register-div{
     margin: 20px;
     font-size: 14px;
@@ -89,10 +121,72 @@ body {
 }
 
 .register-div a{
-    color: rgb(88, 183, 88);
+    margin-left: 5px;
+    color: black;
     text-decoration: none;
 }
 
 .register-div a:hover {
      text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        height: 100vh;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .login-div {
+        
+        width: 100%; 
+        max-width: 90%;
+        padding: 15px; 
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 5px 10px 8px 10px #888888; 
+    }
+
+    .login-div h1 {
+        font-size: 20px; 
+        margin-bottom: 15px;
+    }
+
+    .input-div {
+        gap: 8px; 
+    }
+
+    .login-div input[type="email"],
+    .login-div input[type="password"] {
+        width: 90%; 
+        font-size: 14px; 
+    }
+
+    .log-btn {
+        padding: 8px 15px; 
+        font-size: 14px; 
+    }
+
+    .register-div {
+        margin: 15px; 
+        font-size: 12px; 
+        text-align: center; 
+    }
+
+    .register-div a {
+        font-size: 12px; 
+    }
+
+    .input-div a {
+        font-size: 12px;
+    }
 }

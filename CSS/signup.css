@@ -12,7 +12,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: aquamarine;
+    background-color: rgb(209, 237, 209);;
 
 }
 
@@ -27,16 +27,16 @@ body{
 }
 
 .logo{
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h1{
    margin-bottom: 20px;
    font-size: 24px;
    color: green;
-   text-decoration: underline;
 }
 
 form{
@@ -62,12 +62,14 @@ form{
    
 }
 .form-div input{
-    width: 100%;
-    padding: 10px; 
-    box-sizing: border-box;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    align-items: flex-start;
+    width: 90%;
+    padding: 10px 15px; 
+    border: 2px solid rgba(0, 0, 0, 0.2); 
+    border-radius: 25px; 
+    background-color: transparent; 
+    color: #333; 
+    font-size: 16px; 
+    outline: none;
     
     
 }
@@ -85,7 +87,7 @@ form{
 .action-div a{
     text-decoration: none;
     padding: 10px;
-    color: lightseagreen;
+    color: green;
     font-weight: bold;
 }
 
@@ -95,5 +97,66 @@ form{
     color: green;
 }
 .btn:hover{
+    color: white;
     background-color: darkgreen;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+        height: auto; 
+        padding: 10px; 
+    }
+
+    .main-div {
+        width: 80%; 
+        max-width: 90%; 
+        padding: 15px; 
+        border-radius: 8px;
+        box-shadow:5px 10px 8px 10px #888888;
+        text-align: center; 
+        border-radius: 10px; 
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 20px; 
+        margin-bottom: 15px; 
+    }
+
+    form {
+        gap: 8px; 
+    }
+
+    .form-div {
+        margin: 8px 0; 
+    }
+
+    .form-div input {
+        width: 90%;
+        font-size: 14px;
+        padding: 8px 12px; 
+    }
+
+    .action-div {
+        font-size: 14px; 
+        margin-top: 10px; 
+    }
+
+    .action-div a {
+        font-size: 14px; 
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 14px; 
+        padding: 8px 12px; 
+    }
 }

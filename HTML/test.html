@@ -3,79 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Post Layout</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
-        }
-        .header {
-            background-color: #4267B2;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .profile {
-            display: flex;
-            align-items: center;
-        }
-        .profile img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        .profile-name {
-            font-size: 16px;
-        }
-        .main {
-            padding: 20px;
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .post-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .post-header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        .post-header .name {
-            font-weight: bold;
-        }
-        .post-content {
-            font-size: 16px;
-            color: #333;
-        }
-    </style>
+    <title>Responsive Nav</title>
+    <link rel="stylesheet" href="../CSS/test.css">
+   
 </head>
 <body>
-    <div class="header">
-        <div class="logo">Facebook</div>
-        <div class="profile">
-            <img src="profile-pic.jpg" alt="Profile Picture">
-            <div class="profile-name">John Doe</div>
+    <nav>
+        <div class="nav-options">
+            <img src="./../RESOURCES/image.png" alt="Logo">
+            <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> SignOut</a></li>
+            </ul>
         </div>
-    </div>
-    <div class="main">
-        <div class="post-header">
-            <img src="profile-pic.jpg" alt="User Picture">
-            <div class="name">Jane Smith</div>
+        <div class="user-profile">
+            <img src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg" alt="User">
+            <p>Ursula</p>
         </div>
-        <div class="post-content">
-            This is an example of a written post. It could be anything, such as a status update, a thought, or a story shared with friends!
-        </div>
-    </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-options ul');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
