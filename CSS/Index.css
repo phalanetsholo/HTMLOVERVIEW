@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/* NAVBAR */
+
 *{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -63,63 +63,93 @@ a{
 
 
 /* post css */
-.post-div {
-    display: flex;
-    flex-direction: column;
-    height: 350px;
+
+
+.div-2 {
+    background-color: #fff;
+    width: 95%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-form {
-    height: 100%;
+.div-2 {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-h3{
-    color: green;
-    gap: 20px;
+.div-2 img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }
-textarea{
-    color: darkgreen;
-    height: 100%;
+
+.div-2 p {
+    margin: 0;
     font-size: 18px;
-    border-radius: 5% solid green;
+    font-weight: bold;
+    color: #333;
 }
-.types{
+
+.post-div textarea {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: block;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f0f2f5;
+    height: 100px;
+}
+
+.post-div textarea:focus {
+    outline: none;
+    background-color: #e4e6eb;
+}
+
+.types {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
 }
-input[type="file"]{
+.post img{
+    width: 200px;
+    height: 200px;
+}
+
+.types label,
+.types input[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(69, 132, 69);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.types label:hover,
+.types input[type="submit"]:hover {
+    background-color: rgb(69, 132, 69);
+}
+
+.types label input[type="file"] {
     display: none;
 }
-
-.anytypes {
-    cursor: pointer;
-    background-color: darkslategray;
-    color: white;
-    font-size: 10px;
-    border: 5px solid;
-    padding: 6px 16px;
-    margin: 2px 4px;
-    border-radius: 20%;
-    text-align: center;
-}
-input[type="submit"]{
-    cursor: pointer;
-    background-color: darkslategray;
-    color: white;
-    padding: 6px 16px;
-    margin: 2px 4px;
-    font-size: 10px;
-    text-align: center;
-    border-radius: 20%;
-}
-
-input[type="submit"]:hover {
-    background-color: #ddd;
-    color: black;
-  }
 
 .slider {
     max-height: 250px;
@@ -133,6 +163,7 @@ input[type="submit"]:hover {
 .slider button{
     background-color: #548B54;
 }
+
 
 .div-profile {
     display: flex;
@@ -186,6 +217,29 @@ input[type="submit"]:hover {
     font-weight: bold;
 }
 
+footer {
+    background-color: #d4f8d4; 
+    padding: 10px 0; 
+    text-align: center;
+    border-top: 2px solid #c3e6c3;
+}
+
+footer img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+}
+
+footer p {
+    margin-top: 5px; 
+    font-size: 1em; 
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+footer p span {
+    font-weight: bold;
+}
 
 
 @media only screen and  (max-width:700px) {

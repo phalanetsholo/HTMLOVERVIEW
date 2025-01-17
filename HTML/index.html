@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,33 +13,38 @@
 
             <ul>
                <li><a href="#">Home</a></li>
-               <li><a href="#">Mesages</a></li>
-               <li><a href="#">Contact</a></li>
-               <li><a href="#">LogOut</a></li>
+               <li><a href="#">Friends</a></li>
+               <li><a href="http://127.0.0.1:5500/HTML/start.html">LogOut</a></li>
             </ul>
         </div>
-      
+    
+        
+        </div>
 
         <div class="user-profile">
-            <img src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg" />
+            <img src="../RESOURCES/china.png" />
             <p>Ursula</p>
         </div>
     </nav>
 
     <div class="post-div">
+        <div class="div-2"> 
+            <img src="../RESOURCES/china.png" alt="Profile Picture">
+            <p>Create a post</p>
+            <textarea id="postContent" placeholder="What is on your mind..."></textarea>
+        </div>
 
-        <h3>Create a post</h3>
-
-       <form action="">
-        <textarea name="" id="" placeholder="What is on your mind..."></textarea><br>
-       </form>
-
-       <div class="types">
-        <label class="anytypes"><input type="file">Add File</label>
-        <input type="submit" value="Submit" >
-       </div>
-
+        <div class="types">
+            <label>
+                <input type="file" id="fileInput">Add File
+            </label>
+            <input type="submit" id="submitPost" value="Submit">
+        </div>
     </div>
+
+    <div class="feed" id="feed">
+
+   
 
     <div class="slider">
 
@@ -80,7 +84,7 @@
         </div>
         
         <div class="div-profile"> 
-            <img src="./../RESOURCES/black.png" >
+            <img src="./../RESOURCES/tsholo.jpeg" >
             <h4>Ursula</h4>
             <button>Follow</button>
         </div>
@@ -91,17 +95,13 @@
             <button>Follow</button>
         </div>
   </div>
-  
-<div>
-    <div class="Apost">
-        <img src="../RESOURCES/lady.png" >
-        <div class="Sbuda">Sbuda Maloya </div>
-    </div>
-  <div class="The-post">
-       <p>I give up on South Africans</p>
-   <img src="../RESOURCES/image copy.png">
-  </div>
-</div>
+  <footer>
+    <img src="./../RESOURCES/image.png" alt="Logo">
+    <p>The <span>Not Facebook</span> app was established 2025 >
+    </p>
+</footer>
+
+<script src="../javascript/index.js"></script>
 
 </body>
 </html>

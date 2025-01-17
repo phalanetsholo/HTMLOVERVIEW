@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post and Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .post-div {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .div-2 {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .div-2 img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .div-2 p {
+            margin: 0 0 10px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .div-2 textarea {
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #f0f2f5;
+            resize: none;
+            height: 100px;
+        }
+
+        .div-2 textarea:focus {
+            outline: none;
+            background-color: #e4e6eb;
+        }
+
+        .types {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .types label,
+        .types input[type="submit"] {
+            background-color: rgb(69, 132, 69);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .types label:hover,
+        .types input[type="submit"]:hover {
+            background-color: rgb(50, 110, 50);
+        }
+
+        .types label input[type="file"] {
+            display: none;
+        }
+
+        .feed {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .feed .post {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .feed .post p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .feed .post img {
+            max-width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-div">
+        <div class="div-2"> 
+            <img src="../RESOURCES/china.png" alt="Profile Picture">
+            <p>Create a post</p>
+            <textarea id="postContent" placeholder="What is on your mind..."></textarea>
+        </div>
+
+        <div class="types">
+            <label>
+                <input type="file" id="fileInput">Add File
+            </label>
+            <input type="submit" id="submitPost" value="Submit">
+        </div>
+    </div>
+
+    <div class="feed" id="feed">
+        <!-- Posts will appear here -->
+    </div>
+
+    <script>
+        const submitButton = document.getElementById('submitPost');
+        const postContent = document.getElementById('postContent');
+        const fileInput = document.getElementById('fileInput');
+        const feed = document.getElementById('feed');
+
+        submitButton.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const content = postContent.value.trim();
+            const file = fileInput.files[0];
+
+            if (content || file) {
+                const postDiv = document.createElement('div');
+                postDiv.classList.add('post');
+
+                if (content) {
+                    const postText = document.createElement('p');
+                    postText.textContent = content;
+                    postDiv.appendChild(postText);
+                }
+
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const postImage = document.createElement('img');
+                        postImage.src = e.target.result;
+                        postDiv.appendChild(postImage);
+                    };
+                    reader.readAsDataURL(file);
+                }
+
+                feed.prepend(postDiv);
+
+                // Clear inputs
+                postContent.value = '';
+                fileInput.value = '';
+            } else {
+                alert('Please write something or select a file to post.');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
