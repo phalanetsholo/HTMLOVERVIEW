@@ -114,7 +114,7 @@ body {
     transition: background-color 0.3s ease; 
 }
 .log-btn:hover {
-    background-color: darkgreen; /* Darkens the green on hover */
+    background-color: darkgreen; 
 }
 .register-div{
     margin: 20px;
